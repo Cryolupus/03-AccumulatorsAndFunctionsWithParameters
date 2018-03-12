@@ -4,8 +4,8 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Kevin Chou.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -17,7 +17,7 @@ def main():
 def run_test_sum_powers():
     """ Tests the   sum_powers   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function.
+    # DONE: 2. Implement this function.
     #   It TESTS the  sum_powers  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -28,6 +28,24 @@ def run_test_sum_powers():
     print('--------------------------------------------------')
     print('Testing the   sum_powers   function:')
     print('--------------------------------------------------')
+    print()
+    print('Test1')
+    print('n=3, p=3')
+    print('Expected:', 1+8+27)
+    answer = sum_powers(3, 3)
+    print('Answer:', answer)
+    print('--------------------------------------------------')
+    print('Test2')
+    print('n=2, p=3')
+    print('Expected:', 1 + 8)
+    answer = sum_powers(2, 3)
+    print('Answer:', answer)
+    print('--------------------------------------------------')
+    print('Test3')
+    print('n=4, p=2')
+    print('Expected:', 1 + 4 + 9 + 16)
+    answer = sum_powers(4, 2)
+    print('Answer:', answer)
 
 
 def sum_powers(n, p):
@@ -43,12 +61,16 @@ def sum_powers(n, p):
       -- sum_powers(100, 0.1) returns about 144.45655
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     #   No fair running the code of  sum_powers  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
+    total = 0
+    for k in range (n+1):
+        sum = total + k**p
+    return total
 
 
 def run_test_sum_powers_in_range():
